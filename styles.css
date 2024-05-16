@@ -124,6 +124,16 @@ body {
     width: 50px; /* Adjust size as necessary */
     height: auto;
 }
+.scroll-annotation-new {
+    position: absolute;
+    bottom: 70px; /* Adjust to float just above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    animation: blink 1.5s step-end infinite;
+    z-index: 2; /* Ensures it is above the overlay */
+    color: #ffffff; /* White color for better visibility */
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-list {
