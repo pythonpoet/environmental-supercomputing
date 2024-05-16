@@ -202,7 +202,7 @@ main {
 
 .about-card p {
     margin: 0;
-    color: #0f1544;
+    color: #fff;
 }
 .about-card img, .about-card svg {
     display: block;
