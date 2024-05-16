@@ -2,7 +2,6 @@
 body {
     font-family: Georgia, serif;
     margin: 0;
-    font-family: Arial, sans-serif;
     background-color: #71bf71;
 }
 
@@ -11,8 +10,7 @@ body {
     color: white;
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: 'Helvetica', sans-serif;
-    font-size: 14px; /* Slightly larger font size */
+    font-size: 18px; /* Slightly larger font size */
     font-weight: bold; /* Bold text */
 }
 
@@ -38,7 +36,7 @@ body {
 .nav-list a {
     color: white;
     text-decoration: none;
-    font-size: 14px; /* Match the larger font size */
+    font-size: 14px;
     padding: 5px 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -70,25 +68,24 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(126, 217, 87, 0.75); /* 75% transparency */
+    background-color: rgba(126, 217, 87, 0.75);
     color: #0f1544;
     padding: 40px 60px;
-    width: 65%; /* Adjusted width */
+    width: 65%;
     height: auto;
-    border-radius: 50px / 25px; /* Fully curved left and right edges */
+    border-radius: 50px / 25px;
     text-align: center;
-    max-height: 45vh; /* Increased bottom part */
+    max-height: 45vh;
+    z-index: 2;
 }
 
 .hero-text-box h1 {
-    font-family: 'Georgia', serif;
-    font-size: 38px; /* Increased font size */
-    font-weight: normal; /* Less bold */
+    font-size: 38px;
+    font-weight: normal;
     margin: 0;
 }
 
 .hero-text-box p {
-    font-family: 'Cardo', serif;
     font-size: 22px; /* Increased font size */
     margin: 20px 0 0;
 }
@@ -322,88 +319,120 @@ body.calculator-page {
     width: 100%;
     text-align: center;
 }
-/* CSS for info page */
-.info-page {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
-.info-page .navbar {
-    background-color: black;
-    overflow: hidden;
-    width: 100%;
-}
-
-.info-page .navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.info-page .navbar a:hover {
-    background-color: grey;
-}
-
-.info-page .main h1 {
-    font-size: 3em;
-    margin: 20px;
-}
-
-.info-page .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.info-page .tile {
-    background-color: #275d22;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    width: 60%;
-    color: white;
+/* Hero Section */
+.hero {
     position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: 
+        linear-gradient(rgba(162, 213, 162, 0.4), rgba(162, 213, 162, 0.4)),
+        url('img/info-background.jpg'); /* Update with the actual path to your image */
+    background-size: cover;
+    background-position: center;
 }
 
-.info-page .tile img {
-    width: 50px;
-    height: 50px;
+
+.hero-text-box {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:transparent;
+    color: #0f1544;
+    padding: 40px 60px;
+    width: 65%; /* Adjusted width */
+    border-radius: 50px / 25px; /* Fully curved left and right edges */
+    text-align: center;
+    z-index: 2; /* Ensures text is above the overlay */
 }
 
-.info-page .tile h2 {
-    font-size: 1.5em;
-    margin-top: 70px;
+.hero-text-box h1 {
+    font-family: 'Georgia', serif;
+    font-size: 38px; /* Increased font size */
+    font-weight: normal; /* Less bold */
+    margin: 0;
 }
 
-.info-page .tile p {
-    font-size: 1em;
-    margin: 20px 0;
+.hero-text-box p {
+    font-family: 'Cardo', serif;
+    font-size: 22px; /* Increased font size */
+    margin: 20px 0 0;
 }
 
-.info-page .expand-button {
-    background-color: #ffce42;
-    color: black;
-    padding: 10px 20px;
+.scroll-annotation {
+    position: absolute;
+    bottom: -190px; /* Adjust to float just above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    animation: blink 1.5s step-end infinite;
+    z-index: 2; /* Ensures it is above the overlay */
+    color: #ffffff; /* White color for better visibility */
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Info Page Styles */
+.info-page {
+    padding: 20px;
+    background-color: #a2d5a2; /* Lighter green background */
+}
+
+.tile {
+    position: relative;
+    background-color: #2d5a27; /* Green background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 60px; /* Increase margin to add more space between tiles */
+    text-align: center;
+}
+
+.centered-icon {
+    width: 100px; /* Adjust size as necessary */
+    height: auto;
+    position: absolute;
+    top: -50px; /* Adjust to move the icon out of the box */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Remove bubble styles */
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+.invert-colors {
+    filter: invert(100%);
+}
+
+.tile h2 {
+    margin-top: 70px; /* Adjust to provide space for the icon */
+    color: #fff;
+}
+
+.tile p {
+    color: #fff;
+    text-align: justify;
+}
+
+.expand-button {
+    background-color: #fdd835;
     border: none;
+    color: #000;
+    padding: 10px 20px;
+    margin-top: 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.info-page .expand-button:hover {
-    background-color: #e6b800;
-}
-
-.info-page .invert-colors {
-    filter: invert(100%);
+.expand-button:hover {
+    background-color: #ffeb3b;
 }
