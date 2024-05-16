@@ -295,7 +295,7 @@ body.calculator-page {
     border-top-left-radius: 160px;
     border-top-right-radius: 160px;
     position: absolute;
-    top: 56%;
+    top: 58%;
     left: 67%; /* Centers horizontally */
     transform: translateX(-50%); /* Adjusts the centering horizontally */
     bottom: 20px; /* Adjusts the position to be inside the larger arc */
@@ -328,12 +328,13 @@ body.calculator-page {
     font-size: 32px; /* Increased font size */
     font-weight: bold;
     position: absolute;
-    top: -5px; /* Positioning higher inside the box */
+    top: -25px; /* Positioning higher inside the box */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
 }
+
 
 /* Hero Section */
 .hero {
