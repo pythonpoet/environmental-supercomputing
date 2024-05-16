@@ -262,7 +262,9 @@ body.calculator-page {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 80%; /* Reduced width for better alignment */
+    font-size: 18px; /* Increased font size */
+    font-weight: bold; /* Made the text bold */
 }
 
 .divider {
@@ -316,6 +318,19 @@ body.calculator-page {
 .efficiency-box p {
     position: absolute;
     bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* New styles for results text */
+.efficiency-box .result-value {
+    color: white;
+    font-size: 32px; /* Increased font size */
+    font-weight: bold;
+    position: absolute;
+    top: -5px; /* Positioning higher inside the box */
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     text-align: center;
 }
