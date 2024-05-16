@@ -1,0 +1,409 @@
+/* Existing CSS content */
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #71bf71;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px; /* Slightly larger font size */
+    font-weight: bold; /* Bold text */
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Match the larger font size */
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #555;
+    color: #ffdd57;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(126, 217, 87, 0.75); /* 75% transparency */
+    color: #0f1544;
+    padding: 40px 60px;
+    width: 65%; /* Adjusted width */
+    height: auto;
+    border-radius: 50px / 25px; /* Fully curved left and right edges */
+    text-align: center;
+    max-height: 45vh; /* Increased bottom part */
+}
+
+.hero-text-box h1 {
+    font-family: 'Georgia', serif;
+    font-size: 38px; /* Increased font size */
+    font-weight: normal; /* Less bold */
+    margin: 0;
+}
+
+.hero-text-box p {
+    font-family: 'Cardo', serif;
+    font-size: 22px; /* Increased font size */
+    margin: 20px 0 0;
+}
+
+.logo {
+    position: absolute;
+    bottom: 100px; /* Raised position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: translateX(-50%) scale(1.1); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .hero-text-box {
+        padding: 30px 50px;
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .hero-text-box h1 {
+        font-size: 28px;
+    }
+
+    .hero-text-box p {
+        font-size: 16px;
+    }
+
+    .logo {
+        bottom: 50px; /* Adjusted for smaller screens */
+    }
+}
+
+/* Additional CSS for Best Practices section */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffd962;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+    text-align: center; 
+}
+
+.card h2 {
+    background-color: #006400;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 20px -20px;
+    text-align: center; 
+
+}
+
+.card p {
+    margin: 0;
+}
+/* CSS for About Us section */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header {
+    background-color: #fec925;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 20px -20px;
+}
+
+.about-card p {
+    margin: 0;
+    color: #0f1544;
+}
+.about-card img, .about-card svg {
+    display: block;
+    margin: 0 auto 10px;
+    width: 64px; /* Set a uniform size for all icons */
+    height: auto;
+}
+/* Styles for impact-calculator */
+
+body.calculator-page {
+    background-color: #71bf71;
+    font-family: Georgia, serif;
+    color: white;
+    text-align: center;
+}
+
+.calculator-page h1 {
+    font-size: 28px; /* Increased font size for the main heading */
+}
+
+.calculator-page h2 {
+    font-size: 24px; /* Ensuring consistent font sizing between headings */
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: start;
+}
+
+.input-section {
+    width: 30%;
+    padding-right: 20px;
+}
+
+.input-box {
+    background-color: #006400;
+    border-radius: 10px; /* More rounded corners */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.input {
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 6px;
+    width: calc(100% - 16px);
+}
+
+.calculate-button {
+    background-color: #ffd962;
+    color: white;
+    font-family: Georgia, serif; /* Font changed to Georgia */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.divider {
+    border-left: 2px solid white;
+    height: 500px;
+    margin-left: 10px;
+}
+
+.results-section {
+    width: 65%;
+    margin-top: 20px; /* Adjusted for alignment */
+}
+
+.semi-circle {
+    width: 350px; /* Further increased size */
+    height: 175px;
+    background: #006400; /* Dark green */
+    border-top-left-radius: 175px;
+    border-top-right-radius: 175px;
+    position: relative;
+    margin: 20px auto 10px; /* Adjusted spacing */
+}
+
+.smaller-semi-circle {
+    width: 160px; /* Size of the smaller semi-circle */
+    height: 80px;
+    background: #71bf71; /* Light green color */
+    border-top-left-radius: 160px;
+    border-top-right-radius: 160px;
+    position: absolute;
+    top: 56%;
+    left: 67%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts the centering horizontally */
+    bottom: 20px; /* Adjusts the position to be inside the larger arc */
+}
+
+.efficiency-box {
+    background-color: #fec925;
+    border-top-right-radius: 20px; /* Highly rounded top-right */
+    border-bottom-left-radius: 20px; /* Highly rounded bottom-left */
+    padding: 10px;
+    width: 28%; /* Reduced width for side-by-side alignment */
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    height: 60px; /* Fixed height */
+    vertical-align: top;
+    margin-top: 30px; /* Spacing from the semi-circle */
+}
+
+.efficiency-box p {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+/* CSS for info page */
+.info-page {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.info-page .navbar {
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+}
+
+.info-page .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-page .navbar a:hover {
+    background-color: grey;
+}
+
+.info-page .main h1 {
+    font-size: 3em;
+    margin: 20px;
+}
+
+.info-page .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.info-page .tile {
+    background-color: #275d22;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 60%;
+    color: white;
+    position: relative;
+}
+
+.info-page .tile img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.info-page .tile h2 {
+    font-size: 1.5em;
+    margin-top: 70px;
+}
+
+.info-page .tile p {
+    font-size: 1em;
+    margin: 20px 0;
+}
+
+.info-page .expand-button {
+    background-color: #ffce42;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info-page .expand-button:hover {
+    background-color: #e6b800;
+}
+
+.info-page .invert-colors {
+    filter: invert(100%);
+}
