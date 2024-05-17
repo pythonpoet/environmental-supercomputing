@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CO2 Emissions Calculator</title>
+    <title>Impact Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="calc.js"></script>
+    <script src="calc.js" defer></script>
 </head>
 <body class="calculator-page">
     <header class="header">
@@ -19,8 +19,13 @@
             </ul>
         </nav>
     </header>
-
-    <h1>CO2 Emissions Calculator</h1>
+    
+    <!-- Video Background -->
+    <video id="video-background" src="img/bushfire.mp4" muted></video>
+    
+    <div class="title-container">
+        <h1>CO2 Emissions Calculator</h1>
+    </div>
 
     <div class="content-container">
         <div class="input-section">
@@ -46,15 +51,13 @@
                 <label>Total duration of project (days)</label>
                 <input type="number" class="input" id="input4">
             </div>
+
             <button class="calculate-button" onclick="calculate()">Calculate</button>
         </div>
 
         <div class="divider"></div>
 
         <div class="results-section">
-            <h2>Results</h2>
-            <div class="semi-circle"></div>
-            <div class="smaller-semi-circle"></div>
             <div class="efficiency-box" id="result1">
                 <p class="result-value"></p>
                 <p>Gigajoules of energy used</p>
