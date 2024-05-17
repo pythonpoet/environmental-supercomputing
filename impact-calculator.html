@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CO2 Emissions Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="calc.js"></script>
 </head>
 <body class="calculator-page">
     <header class="header">
@@ -16,7 +17,7 @@
                 <li><a href="best-practices.html">Best Practices</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
-        </nav>
+        </nav>type
     </header>
 
     <h1>CO2 Emissions Calculator</h1>
@@ -26,16 +27,24 @@
             <h2>Input Fields</h2>
             <hr style="border-top: 2px solid white;">
             <div class="input-box">
-                <label>Average Supercomputing Hours</label>
-                <input type="text" class="input" id="input1">
+                <label>Processor time spent (hours)</label>
+                <input type="number" class="input" id="input1">
             </div>
             <div class="input-box">
-                <label>Type of Supercomputing Task</label>
-                <input type="text" class="input" id="input2">
+                <label>Type of node</label>
+                <select for="tasktype" class="input" id="input2">
+                    <option value="thin">Thin (CPU)</option>
+                    <option value="fat">Fat (CPU)</option>
+                    <option value="gpu">GPU</option>
+                </select>
             </div>
             <div class="input-box">
-                <label>Power Consumption</label>
-                <input type="text" class="input" id="input3">
+                <label>Total data generated (GiB)</label>
+                <input type="number" class="input" id="input3">
+            </div>
+            <div class="input-box">
+                <label>Total duration of project (days)</label>
+                <input type="number" class="input" id="input4">
             </div>
             <button class="calculate-button" onclick="calculate()">Calculate</button>
         </div>
@@ -48,38 +57,17 @@
             <div class="smaller-semi-circle"></div>
             <div class="efficiency-box" id="result1">
                 <p class="result-value"></p>
-                <p>Your CO2 emissions per hour</p>
+                <p>Gigajoules of energy used</p>
             </div>
             <div class="efficiency-box" id="result2">
                 <p class="result-value"></p>
-                <p>Your CO2 emissions per year</p>
+                <p>Tonnes of CO2 emitted</p>
             </div>
             <div class="efficiency-box" id="result3">
                 <p class="result-value"></p>
-                <p>Kilometers by car driven</p>
+                <p>Thousands of km driven by car</p>
             </div>
         </div>
     </div>
-
-    <script>
-        function calculate() {
-            const input1 = parseFloat(document.getElementById('input1').value);
-            const input2 = parseFloat(document.getElementById('input2').value);
-            const input3 = parseFloat(document.getElementById('input3').value);
-
-            if (isNaN(input1) || isNaN(input2) || isNaN(input3)) {
-                alert("Please enter valid numbers in all fields.");
-                return;
-            }
-
-            const result = input1 + input2 + input3;
-
-            const output = [result + ' kg', result + ' kg', result + ' km'];
-
-            document.getElementById('result1').querySelector('.result-value').innerText = output[0];
-            document.getElementById('result2').querySelector('.result-value').innerText = output[1];
-            document.getElementById('result3').querySelector('.result-value').innerText = output[2];
-        }
-    </script>
 </body>
 </html>
