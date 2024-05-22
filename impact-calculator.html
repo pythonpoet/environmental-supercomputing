@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impact Calculator</title>
     <link rel="stylesheet" href="styles.css">
-     <link rel="icon" href="img/surf.svg" type="image/icon type">
+    <link rel="icon" href="img/surf.svg" type="image/icon type">
     <script src="calc.js" defer></script>
 </head>
 <body class="calculator-page">
@@ -15,7 +15,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="impact-calculator.html">Impact Calculator</a></li>
                 <li><a href="best-practices.html">Best Practices</a></li>
-                <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -23,53 +22,78 @@
     <!-- Video Background -->
     <video id="video-background" src="img/bushfire.mp4" muted></video>
     
-    <div class="title-container">
-        <h1>CO2 Emissions Calculator</h1>
-    </div>
-
-    <div class="content-container">
-        <div class="input-section">
-            <h2>Input Fields</h2>
-            <hr style="border-top: 2px solid white;">
-            <div class="input-box">
-                <label>Processor time spent (hours)</label>
-                <input type="number" class="input" id="input1">
-            </div>
-            <div class="input-box">
-                <label>Type of node</label>
-                <select for="tasktype" class="input" id="input2">
-                    <option value="thin">Thin (CPU)</option>
-                    <option value="fat">Fat (CPU)</option>
-                    <option value="gpu">GPU</option>
-                </select>
-            </div>
-            <div class="input-box">
-                <label>Total data generated (GiB)</label>
-                <input type="number" class="input" id="input3">
-            </div>
-            <div class="input-box">
-                <label>Total duration of project (days)</label>
-                <input type="number" class="input" id="input4">
-            </div>
-
-            <button class="calculate-button" onclick="calculate()">Calculate</button>
+    <div class="scrollable-container">
+        <div class="title-container">
+            <h1>CO2 Emissions Calculator</h1>
         </div>
 
-        <div class="divider"></div>
+        <div class="content-container">
+            <div class="input-section">
+                <h2>Input Fields</h2>
+                <hr style="border-top: 2px solid white;">
+                <div class="input-box">
+                    <label>Processor time spent (hours)</label>
+                    <input type="number" class="input" id="input1">
+                </div>
+                <div class="input-box">
+                    <label>Type of node</label>
+                    <select for="tasktype" class="input" id="input2">
+                        <option value="thin">Thin (CPU)</option>
+                        <option value="fat">Fat (CPU)</option>
+                        <option value="gpu">GPU</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label>Total data generated (GiB)</label>
+                    <input type="number" class="input" id="input3">
+                </div>
+                <div class="input-box">
+                    <label>Total duration of project (days)</label>
+                    <input type="number" class="input" id="input4">
+                </div>
 
-        <div class="results-section">
-            <div class="efficiency-box" id="result1">
-                <p class="result-value"></p>
-                <p>Gigajoules of energy used</p>
+                <button class="calculate-button" onclick="calculate()">Calculate</button>
             </div>
-            <div class="efficiency-box" id="result2">
-                <p class="result-value"></p>
-                <p>Tonnes of CO2 emitted</p>
+
+            <div class="divider"></div>
+
+            <div class="results-section">
+                <div class="efficiency-box" id="result1">
+                    <p class="result-value"></p>
+                    <p>Gigajoules of energy used</p>
+                </div>
+                <div class="efficiency-box" id="result2">
+                    <p class="result-value"></p>
+                    <p>Tonnes of CO2 emitted</p>
+                </div>
+                <div class="efficiency-box" id="result3">
+                    <p class="result-value"></p>
+                    <p>Thousands of km driven by car</p>
+                </div>
             </div>
-            <div class="efficiency-box" id="result3">
-                <p class="result-value"></p>
-                <p>Thousands of km driven by car</p>
-            </div>
+        </div>
+
+        <div class="about-section">
+            <h1>About Us</h1>
+            <section class="about-cards">
+                <div class="about-card">
+                    <h2 class="card-header">Who are we?</h2>
+                    <p><img src="img/university.svg" alt="University Icon"> We are six students of Computational Social Science at the University of Amsterdam. This website is our Digital Behavioural Change Intervention to incentivize researchers to practice more environmentally sustainable coding. </p>
+                </div>
+                <div class="about-card">
+                    <h2 class="card-header">Our goals:</h2>
+                    <p><img src="img/awareness.svg" alt="Awareness Icon"> Spread awareness</p>
+                    <p><img src="img/target.svg" alt="Impact Icon"> Incenvitize more sustainable coding</p>
+                </div>
+                <div class="about-card">
+                    <h2 class="card-header">Our collaborators:</h2>
+                    <p style="display: flex; align-items: center; justify-content: center;">
+                        <a href="https://uva.nl"><img src="img/uva.svg" alt="UvA Logo" style="width: 50px; height: auto; margin-right: 10px;"></a>
+                        <a href="https://www.surf.nl"><img src="img/surf.svg" alt="SURF Logo" style="width: 80px; height: auto;"></a>
+                    </p>
+		    <p>We are in collaboration with SURF. This website aims to help SURF's interests, while following our program at the UvA.</p>
+                </div>
+            </section>
         </div>
     </div>
 </body>
