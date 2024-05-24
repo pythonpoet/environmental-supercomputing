@@ -32,7 +32,7 @@
                 <h2>Input Fields</h2>
                 <hr style="border-top: 2px solid white;">
                 <div class="input-box">
-                    <label>Processor time spent (hours)</label>
+                    <label>Processor time spent (<a href="https://servicedesk.surf.nl/wiki/display/WIKI/Snellius+partitions+and+accounting">SBUs</a>)</label>
                     <input type="number" class="input" id="input1">
                 </div>
                 <div class="input-box">
@@ -44,7 +44,7 @@
                     </select>
                 </div>
                 <div class="input-box">
-                    <label>Total data generated (GiB)</label>
+                    <label>Total data stored or generated (GiB)</label>
                     <input type="number" class="input" id="input3">
                 </div>
                 <div class="input-box">
@@ -60,15 +60,27 @@
             <div class="results-section">
                 <div class="efficiency-box" id="result1">
                     <p class="result-value"></p>
-                    <p>Gigajoules of energy used</p>
+                    <p class="result-text">Energy used</p>
                 </div>
                 <div class="efficiency-box" id="result2">
                     <p class="result-value"></p>
-                    <p>Tonnes of CO2 emitted</p>
+                    <p class="result-text">CO2 emitted</p>
                 </div>
                 <div class="efficiency-box" id="result3">
                     <p class="result-value"></p>
-                    <p>Thousands of km driven by car</p>
+                    <p class="result-text">Km driven by car</p>
+                </div>
+                <div class="comparison-box">
+                    <p class="result-text">That's like:</p>
+                    <p class="result-value" id="comp1">...</p>
+                    <p class="result-value" id="comp2">...</p>
+                    <p class="result-value" id="comp3">...</p>
+                </div>
+                <div class="comparison-box">
+                    <p class="result-text">Broken down:</p>
+                    <p class="result-value" id="bkd1">...</p>
+                    <p class="result-value" id="bkd2">...</p>
+                    <p class="result-value" id="bkd3">...</p>
                 </div>
             </div>
         </div>
