@@ -18,7 +18,7 @@ const gpu_weight = 128;
 
 const eff = 2; // (Generously) assume 50% grid power efficiency overall
 
-const car_fac = 16; // 1km by car = 16MJ
+const car_fac = 1.6; // 1km by car = 16MJ
 const co2_fac = 27.7; // 1kg CO2 = 27.7 MJ
 
 const comparables = [
